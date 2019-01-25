@@ -1,0 +1,19 @@
+{
+  "name": "project-tracker",
+  "version": "1.0.0",
+  "description": "Unit 3 Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephbkim/Project-Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephbkim/Project-Tracker/issues"
+  },
+  "homepage": "https://github.com/josephbkim/Project-Tracker#readme"
+}
