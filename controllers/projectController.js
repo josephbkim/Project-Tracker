@@ -23,6 +23,11 @@ const projectController = {
       project.save();
       res.send(project);
     });
+  },
+  delete: (req, res) => {
+    Project.findByIdAndDelete(req.params.projectId).then(project => {
+      res.send(200);
+    });
   }
 };
 
