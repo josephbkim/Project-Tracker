@@ -5,6 +5,13 @@ const projectController = {
     Project.find({}).then(projects => {
       res.send(projects);
     });
+  },
+  show: (req, res) => {
+    Project.findById(req.params.projectId)
+      .populate("subcon")
+      .then(project => {
+        res.send(project);
+      });
   }
 };
 
