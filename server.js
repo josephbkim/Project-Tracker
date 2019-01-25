@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.use(express.static(__dirname + "/client/build/"));
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.sendFile(__dirname + "/client/build/index.html");
 });
 
