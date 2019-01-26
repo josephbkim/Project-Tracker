@@ -26,6 +26,15 @@ const subController = {
         res.send(newSub);
       });
     });
+  },
+  update: (req, res) => {
+    let subId = req.params.subId;
+    SubCon.findByIdAndUpdate(subId, req.body, { new: true }).then(
+      updatedSub => {
+        updatedSub.save();
+        res.send(updatedSub);
+      }
+    );
   }
 };
 
