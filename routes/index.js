@@ -10,5 +10,9 @@ router.put("/api/projects/:projectId", projectController.update);
 router.delete("/api/projects/:projectId", projectController.delete);
 
 router.get("/api/projects/:projectId/subcontractors", subController.index);
+router.get(
+  "/api/projects/:projectId/subcontractors/:subId",
+  subController.show
+);
 
 module.exports = router;

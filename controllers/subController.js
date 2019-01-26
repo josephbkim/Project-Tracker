@@ -10,6 +10,12 @@ const subController = {
         console.log();
         res.send(project.subcon);
       });
+  },
+  show: (req, res) => {
+    let subId = req.params.subId;
+    SubCon.findById(subId).then(sub => {
+      res.send(sub);
+    });
   }
 };
 
