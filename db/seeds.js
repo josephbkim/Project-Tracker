@@ -18,9 +18,14 @@ const project1 = new Project({
   name: "Tutti",
   subcon: [eCon1, fCon1]
 });
+const project2 = new Project({
+  name: "Quick Mart",
+  subcon: []
+});
 
 Project.remove({})
   .then(() => SubCon.insertMany([eCon1, fCon1]))
   .then(() => project1.save())
+  .then(() => project2.save())
   .then(() => console.log("Donezo"))
   .then(() => mongoose.connection.close());

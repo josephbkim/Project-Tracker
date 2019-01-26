@@ -5,8 +5,8 @@ const Project = new Schema({
   name: String,
   subcon: [
     {
-      name: String,
-      trade: String
+      type: Schema.Types.ObjectId,
+      ref: "SubCon"
     }
   ]
 });

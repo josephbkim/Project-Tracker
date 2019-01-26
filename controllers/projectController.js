@@ -10,7 +10,7 @@ const projectController = {
     Project.findById(req.params.projectId)
       .populate("subcon")
       .then(project => {
-        res.send(project);
+        res.send(project.subcon);
       });
   },
   create: (req, res) => {
