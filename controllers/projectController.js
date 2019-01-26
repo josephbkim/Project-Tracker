@@ -1,4 +1,5 @@
 const Project = require("../models/Project");
+const SubCon = require("../models/Project");
 
 const projectController = {
   index: (req, res) => {
@@ -10,7 +11,7 @@ const projectController = {
     Project.findById(req.params.projectId)
       .populate("subcon")
       .then(project => {
-        res.send(project.subcon);
+        res.send(project);
       });
   },
   create: (req, res) => {
