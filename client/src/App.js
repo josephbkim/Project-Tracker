@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
+import ProjectsPage from "./components/Projects/ProjectsPage";
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route exact path="/projects" component={ProjectsPage} />
           </Switch>
         </Router>
       </div>
