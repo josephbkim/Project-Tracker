@@ -16,6 +16,16 @@ const subController = {
     SubCon.findById(subId).then(sub => {
       res.send(sub);
     });
+  },
+  create: (req, res) => {
+    let proId = req.params.projectId;
+    Project.findById(proId).then(project => {
+      SubCon.create(req.body).then(newSub => {
+        project.subcon.push(newSub);
+        project.save();
+        res.send(newSub);
+      });
+    });
   }
 };
 
