@@ -35,6 +35,12 @@ const subController = {
         res.send(updatedSub);
       }
     );
+  },
+  delete: (req, res) => {
+    let subId = req.params.subId;
+    SubCon.findByIdAndDelete(subId).then(() => {
+      res.send(200);
+    });
   }
 };
 
