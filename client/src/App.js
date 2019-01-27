@@ -9,13 +9,16 @@ import NavBar from "./components/NavBar/NavBar";
 const Contents = styled.div`
   height: 100vw;
   text-align: center;
+`;
+
+const Container = styled.div`
   background-color: #2f3436;
 `;
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <Container className="container">
         <Router>
           <div>
             <NavBar />
@@ -32,7 +35,7 @@ class App extends Component {
             </Contents>
           </div>
         </Router>
-      </div>
+      </Container>
     );
   }
 }
