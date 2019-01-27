@@ -36,19 +36,22 @@ class ThisProject extends Component {
         <div>
           <H1>Project Name: {this.state.project.name}</H1>
           <Img src={this.state.project.proImg} alt="Project Image" />
-          <p>Image Url: {this.state.project.proImg}</p>
-          <p>
+          <Par>Image Url: {this.state.project.proImg}</Par>
+          <Par>
             SubContractors:
             {this.state.project.subcon.map((sub, i) => (
-              <div key={i}>
-                <p>{sub.name}</p>
-              </div>
+              <div key={i}>{sub.name}</div>
             ))}
-          </p>
+          </Par>
         </div>
         <ButtDiv>
-          <button className="button is-light">Update</button>
-          <button className="button is-light">Delete</button>
+          <button
+            className="button is-link is-medium"
+            onClick={this.projectDelete}
+          >
+            Update
+          </button>
+          <button className="button is-link is-medium">Delete</button>
         </ButtDiv>
       </ThisProDiv>
     );
@@ -85,4 +88,11 @@ const Img = styled.img`
   margin: 0 auto;
   border: 4px solid lightgrey;
   border-radius: 10px;
+`;
+
+const Par = styled.p`
+  padding-left: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 `;

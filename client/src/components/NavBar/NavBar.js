@@ -18,7 +18,7 @@ class NavBar extends Component {
       <NavDiv>
         <Link to="/">Home</Link>
         <Link to="/projects">Projects</Link>
-        <Link to="/subcontractors">Subcontractors</Link>
+        <Link to="/projects/addproject">Add New Project</Link>
       </NavDiv>
     );
   }
