@@ -4,10 +4,12 @@ import styled from "styled-components";
 
 const NavDiv = styled.div`
   display: flex;
-  height: 5 vh;
+  height: 3vh;
   width: 100%;
-  background-color: #fffcd4;
+  background-color: #a0b1b5;
   justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
 `;
 
 class NavBar extends Component {

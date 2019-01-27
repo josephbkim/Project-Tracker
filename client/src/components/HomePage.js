@@ -7,7 +7,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <h1>This is the HomePage</h1>
+        <h1>Project Tracker</h1>
         <HmProImg />
         <Link to="/projects">
           <button>Projects</button>

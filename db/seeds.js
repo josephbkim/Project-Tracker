@@ -44,5 +44,8 @@ Project.remove({})
   .then(() => SubCon.insertMany([eCon1, fCon1]))
   .then(() => project1.save())
   .then(() => project2.save())
+  .then(() => project3.save())
+  .then(() => project4.save())
+  .then(() => project5.save())
   .then(() => console.log("Donezo"))
   .then(() => mongoose.connection.close());

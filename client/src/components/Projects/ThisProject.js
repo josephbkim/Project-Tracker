@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import styled from "styled-components";
 
 class ThisProject extends Component {
   state = {
@@ -26,16 +27,32 @@ class ThisProject extends Component {
 
   render() {
     return (
-      <div>
-        <h1>This is this Project Page</h1>
-        {this.state.project.name}
+      <ThisProDiv>
         <div>
-          <button>Update</button>
-          <button>Delete</button>
+          <H1>{this.state.project.name}</H1>
         </div>
-      </div>
+        <ButtDiv>
+          <button class="button is-light">Update</button>
+          <button class="button is-light">Delete</button>
+        </ButtDiv>
+      </ThisProDiv>
     );
   }
 }
 
 export default ThisProject;
+
+const ThisProDiv = styled.div`
+  display: inline-block;
+  width: 30vw;
+`;
+
+const ButtDiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const H1 = styled.h1`
+  font-size: 5vh;
+  color: #439fb5;
+`;
