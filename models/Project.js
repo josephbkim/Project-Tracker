@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const Project = new Schema({
   name: String,
+  proImg: String,
   subcon: [
     {
       type: Schema.Types.ObjectId,
