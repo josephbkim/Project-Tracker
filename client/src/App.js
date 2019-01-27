@@ -9,7 +9,7 @@ import NavBar from "./components/NavBar/NavBar";
 const Contents = styled.div`
   height: 100vw;
   text-align: center;
-  background-color: #111111;
+  /* background-color: #111111; */
 `;
 
 class App extends Component {

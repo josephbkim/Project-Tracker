@@ -29,6 +29,8 @@ class ThisProject extends Component {
       <div>
         <h1>This is this Project Page</h1>
         {this.state.project.name}
+        <button>Update</button>
+        <button>Delete</button>
       </div>
     );
   }
