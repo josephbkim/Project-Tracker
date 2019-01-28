@@ -14,7 +14,8 @@ class ThisProject extends Component {
           name: ""
         }
       ]
-    }
+    },
+    upFormVisible: false
   };
 
   componentDidMount = () => {
@@ -35,6 +36,10 @@ class ThisProject extends Component {
       .then(() => this.props.history.goBack());
   };
 
+  toggleUpForm = () => {
+    this.setState({ upFormVisible: !this.state.upFormVisible });
+  };
+
   render() {
     return (
       <ThisProDiv>
@@ -52,10 +57,17 @@ class ThisProject extends Component {
         <ButtDiv>
           <button
             className="button is-link is-medium"
-            onClick={this.projectDelete}
+            onClick={this.toggleUpForm}
           >
             Update
           </button>
+          {this.state.upFormVisible ? (
+            <EditProject
+              getThisProject={this.getThisProject}
+              toggleUpForm={this.toggleUpForm}
+              projectId={this.state.project._id}
+            />
+          ) : null}
           <button
             className="button is-link is-medium"
             onClick={this.projectDelete}
