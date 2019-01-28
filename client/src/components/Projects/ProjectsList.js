@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import AddProject from "./AddProject";
+import ThisProject from "./ThisProject";
 
 class ProjectsList extends Component {
   state = {
@@ -35,7 +37,7 @@ class ProjectsList extends Component {
             </Link>
             <div>
               <Link to={`/projects/${project._id}`}>
-                <button class="button is-link">{project.name}</button>
+                <button className="button is-link">{project.name}</button>
               </Link>
             </div>
           </div>

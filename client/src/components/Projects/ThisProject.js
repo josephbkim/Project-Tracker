@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import EditProject from "./EditProject";
 
 class ThisProject extends Component {
   state = {
@@ -28,6 +30,9 @@ class ThisProject extends Component {
 
   projectDelete = () => {
     const projectId = this.props.match.params.projectId;
+    axios
+      .delete(`/api/projects/${projectId}`)
+      .then(() => this.props.history.goBack());
   };
 
   render() {
@@ -51,7 +56,12 @@ class ThisProject extends Component {
           >
             Update
           </button>
-          <button className="button is-link is-medium">Delete</button>
+          <button
+            className="button is-link is-medium"
+            onClick={this.projectDelete}
+          >
+            Delete
+          </button>
         </ButtDiv>
       </ThisProDiv>
     );
@@ -90,7 +100,7 @@ const Img = styled.img`
   border-radius: 10px;
 `;
 
-const Par = styled.p`
+const Par = styled.div`
   padding-left: 3vw;
   display: flex;
   flex-direction: row;

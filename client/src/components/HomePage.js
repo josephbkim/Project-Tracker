@@ -10,7 +10,7 @@ class HomePage extends Component {
         <h1>Project Tracker</h1>
         <HmProImg />
         <Link to="/projects">
-          <button>Projects</button>
+          <button className="button is-link is-medium">Projects</button>
         </Link>
       </div>
     );

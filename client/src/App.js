@@ -20,6 +20,11 @@ class App extends Component {
                 <Route exact path="/projects" component={ProjectsList} />
                 <Route
                   exact
+                  path="/projects/addproject"
+                  component={AddProject}
+                />
+                <Route
+                  exact
                   path="/projects/:projectId"
                   component={ThisProject}
                 />
@@ -41,4 +46,5 @@ const Contents = styled.div`
 
 const Container = styled.div`
   background-color: #2f3436;
+  position: absolute;
 `;
