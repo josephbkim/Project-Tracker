@@ -11,7 +11,8 @@ class ThisProject extends Component {
       proImg: "",
       subcon: [
         {
-          name: ""
+          name: "",
+          trad: ""
         }
       ]
     },
@@ -68,10 +69,15 @@ class ThisProject extends Component {
               projectId={this.state.project._id}
             />
           ) : null}
+          <Link to={`/projects/${this.state.project._id}/subs`}>
+            <button className="button is-link is-medium">Edit Subs</button>
+          </Link>
+
           <button
             className="button is-link is-medium"
             onClick={this.projectDelete}
           >
+            {" "}
             Delete
           </button>
         </ButtDiv>

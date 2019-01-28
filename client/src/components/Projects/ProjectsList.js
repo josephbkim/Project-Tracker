@@ -29,7 +29,7 @@ class ProjectsList extends Component {
   render() {
     return (
       <div>
-        <H1>This is the projects page</H1>
+        <H1>Projects</H1>
         {this.state.project.map((project, i) => (
           <div key={i}>
             <Link to={`/projects/${project._id}`}>

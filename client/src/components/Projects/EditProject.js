@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class EditProject extends Component {
   state = {
     project: {
       name: "",
-      proImg: ""
+      proImg: "",
+      subcon: []
     }
   };
 
@@ -57,6 +59,7 @@ class EditProject extends Component {
               />
             </div>
           </div>
+
           <button type="submit" className="button is-link is-medium">
             Submit
           </button>

@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import ProjectsList from "./components/Projects/ProjectsList";
 import ThisProject from "./components/Projects/ThisProject";
 import AddProject from "./components/Projects/AddProject";
+import SubCon from "./components/Subs/SubCon";
 
 class App extends Component {
   render() {
@@ -28,6 +29,11 @@ class App extends Component {
                   path="/projects/:projectId"
                   component={ThisProject}
                 />
+                <Route
+                  exact
+                  path="/projects/:projectId/subs"
+                  component={SubCon}
+                />
               </Switch>
             </Contents>
           </div>
@@ -40,11 +46,15 @@ class App extends Component {
 export default App;
 
 const Contents = styled.div`
-  height: 100vw;
+  padding: 5vh 0px;
+
   text-align: center;
 `;
 
 const Container = styled.div`
+  padding: 0px;
   background-color: #2f3436;
-  position: absolute;
+  background-size: 100% auto;
+  position: relative;
+  /* border: solid 3px yellow; */
 `;
