@@ -50,7 +50,7 @@ class ThisProject extends Component {
           <Par>
             SubContractors:
             {this.state.project.subcon.map((sub, i) => (
-              <div key={i}>{sub.name}</div>
+              <div key={i}> {sub.name}</div>
             ))}
           </Par>
         </div>
@@ -117,4 +117,5 @@ const Par = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  overflow-wrap: normal;
 `;

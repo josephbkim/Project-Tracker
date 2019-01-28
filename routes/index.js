@@ -4,7 +4,7 @@ const projectController = require("../controllers/projectController");
 const subController = require("../controllers/subController");
 
 router.get("/api/projects", projectController.index);
-router.post("/api/projects/addproject", projectController.create);
+router.post("/api/projects", projectController.create);
 router.get("/api/projects/:projectId", projectController.show);
 router.put("/api/projects/:projectId", projectController.update);
 router.delete("/api/projects/:projectId", projectController.delete);

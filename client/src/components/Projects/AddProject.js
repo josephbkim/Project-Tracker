@@ -20,21 +20,22 @@ class AddProject extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const theGoods = this.state.project;
-    axios.post("/api/projects", theGoods).then(res => {});
+    axios.post("/api/projects", theGoods).then(res => {
+      this.props.history.goBack();
+    });
   };
 
   render() {
     return (
       <div>
         <H1>Add New Project</H1>
-        <Form>
+        <Form onSubmit={this.handleSubmit}>
           <div className="field">
-            <label className="label">Name</label>
             <div className="control">
               <input
                 className="input"
                 type="text"
-                placeholder="name"
+                placeholder="Name"
                 name="name"
                 value={this.state.project.name}
                 onChange={this.handleChange}
@@ -42,7 +43,6 @@ class AddProject extends Component {
             </div>
           </div>
           <div className="field">
-            <label className="label">Name</label>
             <div className="control">
               <input
                 className="input"
@@ -54,7 +54,9 @@ class AddProject extends Component {
               />
             </div>
           </div>
-          <button className="button">Submit</button>
+          <button type="submit" className="button">
+            Submit
+          </button>
         </Form>
       </div>
     );
