@@ -17,6 +17,7 @@ class NavBar extends Component {
 export default NavBar;
 
 const NavDiv = styled.div`
+  font-family: "Noto Serif", serif;
   display: flex;
   height: 3vh;
   /* width: 100%; */

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import AddProject from "./AddProject";
 import ThisProject from "./ThisProject";
 
 class ProjectsList extends Component {
@@ -61,6 +60,7 @@ const ProImg = styled.img`
 `;
 
 const H1 = styled.h1`
+  font-family: "Noto Serif", serif;
   font-size: 5vh;
   color: #439fb5;
 `;

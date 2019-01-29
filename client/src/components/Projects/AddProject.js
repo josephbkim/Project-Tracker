@@ -11,14 +11,14 @@ class AddProject extends Component {
     }
   };
 
-  handleChange = e => {
+  handleChange = event => {
     const newProState = { ...this.state.project };
-    newProState[e.target.name] = e.target.value;
+    newProState[event.target.name] = event.target.value;
     this.setState({ project: newProState });
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = event => {
+    event.preventDefault();
     const theGoods = this.state.project;
     axios.post("/api/projects", theGoods).then(res => {
       this.props.history.goBack();
@@ -35,7 +35,7 @@ class AddProject extends Component {
               <input
                 className="input"
                 type="text"
-                placeholder="Name"
+                placeholder="name"
                 name="name"
                 value={this.state.project.name}
                 onChange={this.handleChange}

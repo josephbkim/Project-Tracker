@@ -30,7 +30,7 @@ class EditProject extends Component {
 
   render() {
     return (
-      <div>
+      <EditPro>
         <H1>Edit Project</H1>
         <Form onSubmit={this.handleSubmit}>
           <div className="field">
@@ -64,7 +64,7 @@ class EditProject extends Component {
             Submit
           </button>
         </Form>
-      </div>
+      </EditPro>
     );
   }
 }
@@ -72,11 +72,15 @@ class EditProject extends Component {
 export default EditProject;
 
 const Form = styled.form`
-  width: 40vw;
+  width: 30vw;
   margin: auto auto;
 `;
 
 const H1 = styled.h1`
   color: white;
   font-size: 5vh;
+`;
+
+const EditPro = styled.div`
+  font-family: "Noto Serif", serif;
 `;

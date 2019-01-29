@@ -34,6 +34,7 @@ class App extends Component {
                   path="/projects/:projectId/subs"
                   component={SubCon}
                 />
+                <Route exact path="/projects/:projectId/subs/edit" />
               </Switch>
             </Contents>
           </div>

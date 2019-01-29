@@ -12,7 +12,7 @@ class ThisProject extends Component {
       subcon: [
         {
           name: "",
-          trad: ""
+          trade: ""
         }
       ]
     },
@@ -43,15 +43,15 @@ class ThisProject extends Component {
 
   render() {
     return (
-      <ThisProDiv>
+      <ThisProDiv className="card">
         <div>
-          <H1>Project Name: {this.state.project.name}</H1>
+          <H1>Project Name: {this.state.project.name} </H1>
           <Img src={this.state.project.proImg} alt="Project Image" />
           <Par>Image Url: {this.state.project.proImg}</Par>
           <Par>
             SubContractors:
             {this.state.project.subcon.map((sub, i) => (
-              <div key={i}> {sub.name}</div>
+              <div key={i}> {sub.name} </div>
             ))}
           </Par>
         </div>
@@ -89,10 +89,12 @@ class ThisProject extends Component {
 export default ThisProject;
 
 const ThisProDiv = styled.div`
+  font-family: "Noto Serif", serif;
+  height: 100vh;
   color: white;
   margin: 10vh auto;
   display: inline-block;
-  width: 35vw;
+  width: 40vw;
 `;
 
 const ButtDiv = styled.div`
@@ -102,16 +104,16 @@ const ButtDiv = styled.div`
 `;
 
 const H1 = styled.h1`
-  padding-left: 3vw;
+  padding-left: 1vw;
   display: flex;
-  font-size: 2vh;
+  font-size: 4vh;
   color: #439fb5;
   justify-content: flex-start;
 `;
 
 const Img = styled.img`
   display: flex;
-  width: 30vw;
+  width: 35vw;
   justify-content: center;
   margin: 0 auto;
   border: 4px solid lightgrey;
@@ -119,7 +121,7 @@ const Img = styled.img`
 `;
 
 const Par = styled.div`
-  padding-left: 3vw;
+  padding-left: 1vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
