@@ -32,14 +32,19 @@ class SubCon extends Component {
         <Link to="/subs/edit">
           <button className="button is-link">Add Subcontractor</button>
         </Link>
-        <div>
+        <SubDiv>
           {this.state.subcon.map((subs, i) => (
-            <div key={i}>
-              <h4>Company Name: {subs.name}</h4>
-              <p>Trade: {subs.trade}</p>
-            </div>
+            <article class="message is-info" key={i}>
+              <div class="message-header">
+                Company Name: {subs.name}
+                <button class="delete" />
+              </div>
+              <div class="message-body">
+                <p>Trade: {subs.trade}</p>
+              </div>
+            </article>
           ))}
-        </div>
+        </SubDiv>
       </ConDiv>
     );
   }
@@ -57,4 +62,12 @@ const ConDiv = styled.div`
   font-size: 3vh;
   height: 100vh;
   color: white;
+`;
+
+const SubDiv = styled.div`
+  display: flex;
+  width: 40vw;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: left;
 `;

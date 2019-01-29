@@ -43,18 +43,26 @@ class ThisProject extends Component {
 
   render() {
     return (
-      <ThisProDiv className="card">
-        <div>
-          <H1>Project Name: {this.state.project.name} </H1>
-          <Img src={this.state.project.proImg} alt="Project Image" />
-          <Par>Image Url: {this.state.project.proImg}</Par>
+      <ThisProDiv>
+        <CardDiv className="card">
+          <div className="card-image">
+            <figure class="image is-4by3">
+              <Img src={this.state.project.proImg} alt="Project Image" />
+            </figure>{" "}
+          </div>
+
+          <div class="media-content">
+            <p class="title is-4">Project Name: {this.state.project.name}</p>
+          </div>
           <Par>
             SubContractors:
-            {this.state.project.subcon.map((sub, i) => (
-              <div key={i}> {sub.name} </div>
-            ))}
+            <ul>
+              {this.state.project.subcon.map((sub, i) => (
+                <li key={i}> {sub.name} </li>
+              ))}
+            </ul>
           </Par>
-        </div>
+        </CardDiv>
         <ButtDiv>
           <button
             className="button is-link is-medium"
@@ -77,7 +85,6 @@ class ThisProject extends Component {
             className="button is-link is-medium"
             onClick={this.projectDelete}
           >
-            {" "}
             Delete
           </button>
         </ButtDiv>
@@ -91,7 +98,6 @@ export default ThisProject;
 const ThisProDiv = styled.div`
   font-family: "Noto Serif", serif;
   height: 100vh;
-  color: white;
   margin: 10vh auto;
   display: inline-block;
   width: 40vw;
@@ -116,14 +122,19 @@ const Img = styled.img`
   width: 35vw;
   justify-content: center;
   margin: 0 auto;
-  border: 4px solid lightgrey;
-  border-radius: 10px;
+  border-bottom: 4px solid lightgrey;
 `;
 
 const Par = styled.div`
-  padding-left: 1vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   overflow-wrap: normal;
+`;
+
+const CardDiv = styled.div`
+  background-color: #a0b1b5;
+  border: 4px solid lightgrey;
+  border-radius: 10px;
+  color: #2f3436;
 `;
