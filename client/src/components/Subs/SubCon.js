@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import SubAddForm from "./SubAddForm";
 
 class SubCon extends Component {
   state = {
@@ -10,7 +11,8 @@ class SubCon extends Component {
         name: "",
         trade: ""
       }
-    ]
+    ],
+    addFormVisible: false
   };
 
   componentDidMount = () => {
@@ -25,21 +27,34 @@ class SubCon extends Component {
       .then(res => this.setState({ subcon: res.data }));
   };
 
+  addFormToggle = () => {
+    this.setState({ addFormVisible: !this.addFormVisible });
+  };
+
   render() {
     return (
       <ConDiv>
         <SubHeader>Project Subcontractors</SubHeader>
-        <Link to="/subs/edit">
-          <button className="button is-link">Add Subcontractor</button>
-        </Link>
+        <button className="button is-link" onClick={this.addFormToggle}>
+          Add Subcontractor
+        </button>
+        <div>
+          {this.state.addFormVisible ? (
+            <SubAddForm
+              getAllSubs={this.getAllSubs}
+              addFormToggle={this.addFormToggle}
+              projectId={this.props.match.params.projectId}
+            />
+          ) : null}
+        </div>
         <SubDiv>
           {this.state.subcon.map((subs, i) => (
-            <article class="message is-info" key={i}>
-              <div class="message-header">
+            <article className="message is-info" key={i}>
+              <div className="message-header">
                 Company Name: {subs.name}
-                <button class="delete" />
+                <button className="delete" />
               </div>
-              <div class="message-body">
+              <div className="message-body">
                 <p>Trade: {subs.trade}</p>
               </div>
             </article>

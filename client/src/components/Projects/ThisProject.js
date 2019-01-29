@@ -70,13 +70,7 @@ class ThisProject extends Component {
           >
             Update
           </button>
-          {this.state.upFormVisible ? (
-            <EditProject
-              getThisProject={this.getThisProject}
-              toggleUpForm={this.toggleUpForm}
-              projectId={this.state.project._id}
-            />
-          ) : null}
+
           <Link to={`/projects/${this.state.project._id}/subs`}>
             <button className="button is-link is-medium">Edit Subs</button>
           </Link>
@@ -88,6 +82,15 @@ class ThisProject extends Component {
             Delete
           </button>
         </ButtDiv>
+        <div>
+          {this.state.upFormVisible ? (
+            <EditProject
+              getThisProject={this.getThisProject}
+              toggleUpForm={this.toggleUpForm}
+              projectId={this.state.project._id}
+            />
+          ) : null}
+        </div>
       </ThisProDiv>
     );
   }
