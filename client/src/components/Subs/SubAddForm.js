@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Axios from "axios";
+import axios from "axios";
+import styled from "styled-components";
 
 class SubAddForm extends Component {
   state = {
@@ -19,7 +20,7 @@ class SubAddForm extends Component {
     event.preventDefault();
     const projectId = this.props.projectId;
     const theGoods = this.state.subcon;
-    Axios.post(`/api/projects/${projectId}/subs`, theGoods).then(res => {
+    axios.post(`/api/projects/${projectId}/subs`, theGoods).then(res => {
       this.props.getAllSubs();
       //   this.props.addFormToggle();
     });
@@ -27,7 +28,7 @@ class SubAddForm extends Component {
 
   render() {
     return (
-      <div>
+      <FormDiv>
         <h1>Add New Sub</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="field">
@@ -56,11 +57,19 @@ class SubAddForm extends Component {
               />
             </div>
           </div>
-          <button className="button">Submit</button>
+          <button className="button is-link">Submit</button>
         </form>
-      </div>
+      </FormDiv>
     );
   }
 }
 
 export default SubAddForm;
+
+const FormDiv = styled.div`
+  display: flex;
+  width: 40vw;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+`;

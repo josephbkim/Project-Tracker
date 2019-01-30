@@ -112,14 +112,6 @@ const ButtDiv = styled.div`
   justify-content: space-around;
 `;
 
-const H1 = styled.h1`
-  padding-left: 1vw;
-  display: flex;
-  font-size: 4vh;
-  color: #439fb5;
-  justify-content: flex-start;
-`;
-
 const Img = styled.img`
   display: flex;
   width: 35vw;

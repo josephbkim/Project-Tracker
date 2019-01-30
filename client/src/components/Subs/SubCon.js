@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import SubAddForm from "./SubAddForm";
 
 class SubCon extends Component {
@@ -21,10 +20,19 @@ class SubCon extends Component {
 
   getAllSubs = () => {
     const projectId = this.props.match.params.projectId;
-    console.log(projectId);
     axios
       .get(`/api/projects/${projectId}/subs`)
       .then(res => this.setState({ subcon: res.data }));
+  };
+
+  subDelete = event => {
+    event.preventDefault();
+    const projectId = this.props.match.params.projectId;
+    const subId = this.state.subcon._id;
+    console.log(subId);
+    axios.delete(`/api/projects/${projectId}/subs/${subId}`).then(() => {
+      this.props.history.goBack();
+    });
   };
 
   addFormToggle = () => {
@@ -52,7 +60,7 @@ class SubCon extends Component {
             <article className="message is-info" key={i}>
               <div className="message-header">
                 Company Name: {subs.name}
-                <button className="delete" />
+                <button className="delete" onClick={this.subDelete} />
               </div>
               <div className="message-body">
                 <p>Trade: {subs.trade}</p>
@@ -69,7 +77,7 @@ export default SubCon;
 
 const SubHeader = styled.div`
   font-size: 5vh;
-  color: white;
+  color: #439fb5;
 `;
 
 const ConDiv = styled.div`
