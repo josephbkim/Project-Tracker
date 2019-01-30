@@ -13,27 +13,31 @@ class App extends Component {
     return (
       <Router>
         <Container className="container">
-          {/* <div> */}
-          <NavBar />
-          <Contents>
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/projects" component={ProjectsList} />
-              <Route exact path="/projects/addproject" component={AddProject} />
-              <Route
-                exact
-                path="/projects/:projectId"
-                component={ThisProject}
-              />
-              <Route
-                exact
-                path="/projects/:projectId/subs"
-                component={SubCon}
-              />
-              <Route exact path="/projects/:projectId/subs/edit" />
-            </Switch>
-          </Contents>
-          {/* </div> */}
+          <div>
+            <NavBar />
+            <Contents>
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/projects" component={ProjectsList} />
+                <Route
+                  exact
+                  path="/projects/addproject"
+                  component={AddProject}
+                />
+                <Route
+                  exact
+                  path="/projects/:projectId"
+                  component={ThisProject}
+                />
+                <Route
+                  exact
+                  path="/projects/:projectId/subs"
+                  component={SubCon}
+                />
+                <Route exact path="/projects/:projectId/subs/edit" />
+              </Switch>
+            </Contents>
+          </div>
         </Container>
       </Router>
     );

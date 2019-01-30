@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/josephbkim/Project-Tracker#readme",
   "dependencies": {
+    "bulma-styled-components": "^1.0.2",
     "concurrently": "^4.1.0",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
