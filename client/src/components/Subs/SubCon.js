@@ -25,13 +25,13 @@ class SubCon extends Component {
       .then(res => this.setState({ subcon: res.data }));
   };
 
-  subDelete = event => {
+  subDelete = (event, subsId) => {
     event.preventDefault();
+
     const projectId = this.props.match.params.projectId;
-    const subId = this.state.subcon._id;
-    console.log(subId);
-    axios.delete(`/api/projects/${projectId}/subs/${subId}`).then(() => {
-      this.props.history.goBack();
+
+    axios.delete(`/api/projects/${projectId}/subs/${subsId}`).then(() => {
+      this.getAllSubs();
     });
   };
 
@@ -60,7 +60,10 @@ class SubCon extends Component {
             <article className="message is-info" key={i}>
               <div className="message-header">
                 Company Name: {subs.name}
-                <button className="delete" onClick={this.subDelete} />
+                <button
+                  className="delete"
+                  onClick={event => this.subDelete(event, subs._id)}
+                />
               </div>
               <div className="message-body">
                 <p>Trade: {subs.trade}</p>

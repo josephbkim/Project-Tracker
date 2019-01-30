@@ -11,35 +11,31 @@ import SubCon from "./components/Subs/SubCon";
 class App extends Component {
   render() {
     return (
-      <Container className="container">
-        <Router>
-          <div>
-            <NavBar />
-            <Contents>
-              <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/projects" component={ProjectsList} />
-                <Route
-                  exact
-                  path="/projects/addproject"
-                  component={AddProject}
-                />
-                <Route
-                  exact
-                  path="/projects/:projectId"
-                  component={ThisProject}
-                />
-                <Route
-                  exact
-                  path="/projects/:projectId/subs"
-                  component={SubCon}
-                />
-                <Route exact path="/projects/:projectId/subs/edit" />
-              </Switch>
-            </Contents>
-          </div>
-        </Router>
-      </Container>
+      <Router>
+        <Container className="container">
+          {/* <div> */}
+          <NavBar />
+          <Contents>
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/projects" component={ProjectsList} />
+              <Route exact path="/projects/addproject" component={AddProject} />
+              <Route
+                exact
+                path="/projects/:projectId"
+                component={ThisProject}
+              />
+              <Route
+                exact
+                path="/projects/:projectId/subs"
+                component={SubCon}
+              />
+              <Route exact path="/projects/:projectId/subs/edit" />
+            </Switch>
+          </Contents>
+          {/* </div> */}
+        </Container>
+      </Router>
     );
   }
 }
@@ -48,14 +44,16 @@ export default App;
 
 const Contents = styled.div`
   padding: 5vh 0px;
-
   text-align: center;
 `;
 
 const Container = styled.div`
-  padding: 0px;
+  display: grid;
+  width: 100%;
+  margin: auto;
+  padding: 0;
   background-color: #2f3436;
-  background-size: 100% auto;
-  position: relative;
+  background-size: 100%;
+  /* position: absolute; */
   /* border: solid 3px yellow; */
 `;
