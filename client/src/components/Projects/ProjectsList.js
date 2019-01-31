@@ -9,6 +9,7 @@ class ProjectsList extends Component {
       {
         name: "",
         proImg: "",
+        startDate: "",
         subcon: []
       }
     ]

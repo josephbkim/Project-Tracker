@@ -9,6 +9,7 @@ class ThisProject extends Component {
     project: {
       name: "",
       proImg: "",
+      startDate: "",
       subcon: [
         {
           name: "",
@@ -53,9 +54,10 @@ class ThisProject extends Component {
 
           <div class="media-content">
             <p class="title is-4">Project Name: {this.state.project.name}</p>
+            <p class="title is-4">Start Date: {this.state.project.startDate}</p>
           </div>
           <Par>
-            <h3>SubContractors: </h3>
+            <p>SubContractors: </p>
             <ul>
               {this.state.project.subcon.map((sub, i) => (
                 <li key={i}> {sub.name} </li>
@@ -103,6 +105,7 @@ export default ThisProject;
 
 const ThisProDiv = styled.div`
   font-family: "Noto Serif", serif;
+  font-size: 2vh;
   height: 100vh;
   margin: 10vh auto;
   display: inline-block;
@@ -124,6 +127,8 @@ const Img = styled.img`
 `;
 
 const Par = styled.div`
+  margin-top: 3px;
+  font-weight: bold;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
