@@ -55,7 +55,7 @@ class ThisProject extends Component {
             <p class="title is-4">Project Name: {this.state.project.name}</p>
           </div>
           <Par>
-            SubContractors:
+            <h3>SubContractors: </h3>
             <ul>
               {this.state.project.subcon.map((sub, i) => (
                 <li key={i}> {sub.name} </li>
@@ -64,23 +64,23 @@ class ThisProject extends Component {
           </Par>
         </CardDiv>
         <ButtDiv>
-          <button
+          <Button
             className="button is-link is-medium"
             onClick={this.toggleUpForm}
           >
             Update
-          </button>
+          </Button>
 
           <Link to={`/projects/${this.state.project._id}/subs`}>
-            <button className="button is-link is-medium">Edit Subs</button>
+            <Button className="button is-link is-medium">Edit Subs</Button>
           </Link>
 
-          <button
+          <Button
             className="button is-link is-medium"
             onClick={this.projectDelete}
           >
             Delete
-          </button>
+          </Button>
         </ButtDiv>
         <div>
           {this.state.upFormVisible ? (
@@ -88,6 +88,9 @@ class ThisProject extends Component {
               getThisProject={this.getThisProject}
               toggleUpForm={this.toggleUpForm}
               projectId={this.state.project._id}
+              projName={this.state.project.name}
+              projImg={this.state.project.proImg}
+              projSubcon={this.state.project.proSubcon}
             />
           ) : null}
         </div>
@@ -125,6 +128,7 @@ const Par = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   overflow-wrap: normal;
+  text-align: left;
 `;
 
 const CardDiv = styled.div`
@@ -132,4 +136,9 @@ const CardDiv = styled.div`
   border: 4px solid lightgrey;
   border-radius: 10px;
   color: #2f3436;
+`;
+
+const Button = styled.button`
+  background-color: #4b7782;
+  font-family: "Noto Serif", serif;
 `;

@@ -10,7 +10,7 @@ class HomePage extends Component {
         <h1>Project Tracker</h1>
         <HmProImg />
         <Link to="/projects">
-          <button className="button is-link is-medium">Projects</button>
+          <Button className="button is-link is-medium">Projects</Button>
         </Link>
       </HomeDiv>
     );
@@ -22,6 +22,11 @@ export default HomePage;
 const HomeDiv = styled.div`
   font-family: "Noto Serif", serif;
   height: 100vw;
-  color: white;
+  color: #439fb5;
   font-size: 5vh;
+`;
+
+const Button = styled.button`
+  background-color: #4b7782;
+  font-family: "Noto Serif", serif;
 `;

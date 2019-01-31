@@ -4,3 +4,7 @@
   text-align: center;
   background-color: #ffaaff;
 }
+
+#root {
+  max-width: none;
+}

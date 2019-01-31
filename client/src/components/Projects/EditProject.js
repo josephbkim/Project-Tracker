@@ -12,7 +12,10 @@ class EditProject extends Component {
   };
 
   handleChange = e => {
-    const newProState = { ...this.state.project };
+    let newProState = { ...this.state.project };
+    console.log(newProState);
+    newProState.name = document.getElementById("name").defaultValue;
+    newProState.proImg = document.getElementById("proImg").defaultValue;
     newProState[e.target.name] = e.target.value;
     this.setState({ project: newProState });
   };
@@ -38,9 +41,11 @@ class EditProject extends Component {
               <input
                 className="input"
                 type="text"
-                placeholder="name"
+                placeholder="Name"
                 name="name"
-                value={this.state.project.name}
+                id="name"
+                defaultValue={this.props.projName}
+                // value={this.state.project.name}
                 onChange={this.handleChange}
               />
             </div>
@@ -51,9 +56,11 @@ class EditProject extends Component {
               <input
                 className="input"
                 type="text"
-                placeholder="Url"
+                placeholder="Image Url"
                 name="proImg"
-                value={this.state.project.proImg}
+                id="proImg"
+                defaultValue={this.props.projImg}
+                // value={this.state.project.proImg}
                 onChange={this.handleChange}
               />
             </div>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
+
 import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./components/HomePage";
 import ProjectsList from "./components/Projects/ProjectsList";
@@ -12,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Container className="container">
+        <Container>
           <div>
             <NavBar />
             <Contents>
@@ -53,11 +54,16 @@ const Contents = styled.div`
 
 const Container = styled.div`
   display: grid;
-  width: 100%;
+  width: 100vw !important;
   margin: auto;
   padding: 0;
   background-color: #2f3436;
   background-size: 100%;
   /* position: absolute; */
   /* border: solid 3px yellow; */
+`;
+
+const Button = styled.button`
+  background-color: #4b7782;
+  font-family: "Noto Serif", serif;
 `;
