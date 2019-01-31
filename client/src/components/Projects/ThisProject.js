@@ -90,7 +90,7 @@ class ThisProject extends Component {
               projectId={this.state.project._id}
               projName={this.state.project.name}
               projImg={this.state.project.proImg}
-              projSubcon={this.state.project.proSubcon}
+              projSubcon={this.state.project.Subcon}
             />
           ) : null}
         </div>

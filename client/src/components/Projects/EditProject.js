@@ -6,8 +6,7 @@ class EditProject extends Component {
   state = {
     project: {
       name: "",
-      proImg: "",
-      subcon: []
+      proImg: ""
     }
   };
 
@@ -45,13 +44,12 @@ class EditProject extends Component {
                 name="name"
                 id="name"
                 defaultValue={this.props.projName}
-                // value={this.state.project.name}
                 onChange={this.handleChange}
               />
             </div>
           </div>
           <div className="field">
-            <label className="label">Name</label>
+            <label className="label">Image Url</label>
             <div className="control">
               <input
                 className="input"
@@ -60,7 +58,6 @@ class EditProject extends Component {
                 name="proImg"
                 id="proImg"
                 defaultValue={this.props.projImg}
-                // value={this.state.project.proImg}
                 onChange={this.handleChange}
               />
             </div>
