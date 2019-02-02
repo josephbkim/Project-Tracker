@@ -54,7 +54,7 @@ class AddProject extends Component {
               />
             </div>
           </div>
-          <button type="submit" className="button">
+          <button type="submit" className="button is-black is-medium">
             Submit
           </button>
         </Form>
@@ -73,4 +73,8 @@ const Form = styled.form`
 const H1 = styled.h1`
   color: white;
   font-size: 10vh;
+`;
+
+const Button = styled.button`
+  font-family: "Noto Serif", serif;
 `;

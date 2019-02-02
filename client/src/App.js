@@ -63,7 +63,7 @@ const Container = styled.div`
   /* border: solid 3px yellow; */
 `;
 
-const Button = styled.button`
-  background-color: #4b7782;
-  font-family: "Noto Serif", serif;
-`;
+// const Button = styled.button`
+//   background-color: #4b7782;
+//   font-family: "Noto Serif", serif;
+// `;

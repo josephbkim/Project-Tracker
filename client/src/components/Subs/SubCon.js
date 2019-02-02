@@ -43,7 +43,10 @@ class SubCon extends Component {
     return (
       <ConDiv>
         <SubHeader>Project Subcontractors</SubHeader>
-        <button className="button is-link" onClick={this.addFormToggle}>
+        <button
+          className="button is-black is-medium"
+          onClick={this.addFormToggle}
+        >
           Add Subcontractor
         </button>
         <div>

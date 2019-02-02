@@ -25,6 +25,7 @@ const NavDiv = styled.div`
   justify-content: space-around;
   align-items: center;
   font-weight: bold;
+  color: white;
   padding: 0px;
   top: 0px;
   /* position: fixed; */

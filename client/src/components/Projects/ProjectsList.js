@@ -36,7 +36,9 @@ class ProjectsList extends Component {
             </Link>
             <div>
               <Link to={`/projects/${project._id}`}>
-                <button className="button is-link">{project.name}</button>
+                <button className="button is-black is-medium">
+                  {project.name}
+                </button>
               </Link>
             </div>
           </div>

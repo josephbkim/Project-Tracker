@@ -67,18 +67,18 @@ class ThisProject extends Component {
         </CardDiv>
         <ButtDiv>
           <Button
-            className="button is-link is-medium"
+            className="button is-black is-large"
             onClick={this.toggleUpForm}
           >
             Update
           </Button>
 
           <Link to={`/projects/${this.state.project._id}/subs`}>
-            <Button className="button is-link is-medium">Edit Subs</Button>
+            <Button className="button is-black is-large">Edit Subs</Button>
           </Link>
 
           <Button
-            className="button is-link is-medium"
+            className="button is-black is-large"
             onClick={this.projectDelete}
           >
             Delete
@@ -146,4 +146,5 @@ const CardDiv = styled.div`
 const Button = styled.button`
   background-color: #4b7782;
   font-family: "Noto Serif", serif;
+  border: 1px solid lightgrey;
 `;

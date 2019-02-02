@@ -57,7 +57,7 @@ class SubAddForm extends Component {
               />
             </div>
           </div>
-          <button className="button is-link">Submit</button>
+          <button className="button is-black is-large">Submit</button>
         </form>
       </FormDiv>
     );
