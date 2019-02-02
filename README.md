@@ -6,9 +6,11 @@ This is a commercial construction project tracker to give companies quick access
 
 ## Links
 
-[Github](https://github.com/josephbkim/Project-Tracker)
-[Heroku](https://project-tracker-wdi19-joe.herokuapp.com/)
-[Trello Board](https://trello.com/b/rNq2Ul8E/unit-3-project)
+- [Github](https://github.com/josephbkim/Project-Tracker)
+
+- [Heroku](https://project-tracker-wdi19-joe.herokuapp.com/)
+
+- [Trello Board](https://trello.com/b/rNq2Ul8E/unit-3-project)
 
 ## Technologies
 
