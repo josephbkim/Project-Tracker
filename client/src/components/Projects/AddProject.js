@@ -27,7 +27,7 @@ class AddProject extends Component {
 
   render() {
     return (
-      <div>
+      <Div>
         <H1>Add New Project</H1>
         <Form onSubmit={this.handleSubmit}>
           <div className="field">
@@ -54,11 +54,11 @@ class AddProject extends Component {
               />
             </div>
           </div>
-          <button type="submit" className="button is-black is-medium">
+          <Button type="submit" className="button is-black is-medium">
             Submit
-          </button>
+          </Button>
         </Form>
-      </div>
+      </Div>
     );
   }
 }
@@ -77,4 +77,8 @@ const H1 = styled.h1`
 
 const Button = styled.button`
   font-family: "Noto Serif", serif;
+`;
+
+const Div = styled.div`
+  height: 100vh;
 `;
