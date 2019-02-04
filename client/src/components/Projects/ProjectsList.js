@@ -36,9 +36,9 @@ class ProjectsList extends Component {
             </Link>
             <div>
               <Link to={`/projects/${project._id}`}>
-                <button className="button is-black is-medium">
+                <Button className="button is-black is-medium">
                   {project.name}
-                </button>
+                </Button>
               </Link>
             </div>
           </div>
@@ -65,4 +65,9 @@ const H1 = styled.h1`
   font-family: "Noto Serif", serif;
   font-size: 5vh;
   color: #439fb5;
+`;
+
+const Button = styled.button`
+  font-family: "Noto Serif", serif;
+  margin: 3px;
 `;
