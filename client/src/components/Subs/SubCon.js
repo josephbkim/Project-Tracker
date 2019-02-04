@@ -43,12 +43,12 @@ class SubCon extends Component {
     return (
       <ConDiv>
         <SubHeader>Project Subcontractors</SubHeader>
-        <button
+        <Button
           className="button is-black is-medium"
           onClick={this.addFormToggle}
         >
           Add Subcontractor
-        </button>
+        </Button>
         <div>
           {this.state.addFormVisible ? (
             <SubAddForm
@@ -83,7 +83,7 @@ export default SubCon;
 
 const SubHeader = styled.div`
   font-size: 5vh;
-  color: #439fb5;
+  color: whitesmoke;
 `;
 
 const ConDiv = styled.div`
@@ -101,4 +101,7 @@ const SubDiv = styled.div`
   text-align: left;
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+  font-family: "Noto Serif", serif;
+  margin: 1vh;
+`;

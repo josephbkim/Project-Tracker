@@ -64,7 +64,7 @@ const ProImg = styled.img`
 const H1 = styled.h1`
   font-family: "Noto Serif", serif;
   font-size: 5vh;
-  color: #439fb5;
+  color: whitesmoke;
 `;
 
 const Button = styled.button`

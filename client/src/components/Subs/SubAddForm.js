@@ -57,7 +57,7 @@ class SubAddForm extends Component {
               />
             </div>
           </div>
-          <button className="button is-black is-large">Submit</button>
+          <Button className="button is-black is-large">Submit</Button>
         </form>
       </FormDiv>
     );
@@ -72,4 +72,9 @@ const FormDiv = styled.div`
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
+`;
+
+const Button = styled.button`
+  font-family: "Noto Serif", serif;
+  margin: 3px;
 `;
