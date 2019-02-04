@@ -14,10 +14,10 @@ This is a commercial construction project tracker to give companies quick access
 
 ## Wireframe
 
-- ![Wireframe 1](https://i.imgur.com/BWe7oRk.png)
-- ![Wireframe 2](https://i.imgur.com/GMoTFXf.png)
-- ![Wireframe 3](https://i.imgur.com/yWzrx57.png)
-- ![Wireframe 4](https://i.imgur.com/6mVYYoP.png)
+- ![Wireframe 1](https://i.imgur.com/BWe7oRks.png)
+- ![Wireframe 2](https://i.imgur.com/GMoTFXfs.png)
+- ![Wireframe 3](https://i.imgur.com/yWzrx57s.png)
+- ![Wireframe 4](https://i.imgur.com/6mVYYoPs.png)
 
 ## Technologies
 
